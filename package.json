@@ -14,14 +14,15 @@
   "scripts": {
     "start": "node server.js",
     "serve": "nodemon server.js",
-    "lint": "jshint ."
+    "lint": "jshint .",
+    "mongodb:start": "mongod --dbpath ./.highscores/data/db"
   },
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "dependencies": {
     "body-parser": "^1.9.3",
     "express": "^4.10.3",
     "method-override": "^2.3.0",
+    "mongoose": "^3.8.21",
     "morgan": "^1.5.0"
   }
 }
