@@ -1,0 +1,27 @@
+{
+  "name": "rubegoldbash-server",
+  "version": "0.1.0",
+  "homepage": "https://github.com/ThibWeb/rubegoldbash-server",
+  "description": "Highscore server for RubeGoldBash",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ThibWeb/rubegoldbash-server"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "private": true,
+  "scripts": {
+    "start": "node server.js",
+    "serve": "nodemon server.js",
+    "lint": "jshint ."
+  },
+  "devDependencies": {
+  },
+  "dependencies": {
+    "body-parser": "^1.9.3",
+    "express": "^4.10.3",
+    "method-override": "^2.3.0",
+    "morgan": "^1.5.0"
+  }
+}
