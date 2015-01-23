@@ -1,30 +1,15 @@
 'use strict';
 
 var express = require('express');
-var bodyParser = require('body-parser');
-
 var app = express();
-app.use(bodyParser.urlencoded({extended: false}));
 
-// app.param('counter', function(req, res, next, counter){
-//   req.counter =
-//   return next()
-// });
+app.set('port', (process.env.PORT || 5000));
+app.use(express.static(__dirname + '/public'));
 
-app.put('/count/:counter', function(req, res) {
-  res.send(req.params.counter);
+app.get('/', function(request, response) {
+  response.send('Hello World!');
 });
 
-app.get('/count/:counter', function(req, res) {
-  res.send(req.params.counter);
+app.listen(app.get('port'), function() {
+  console.log("Node app is running at localhost:" + app.get('port'));
 });
-
-app.post('/count/:counter', function(req, res) {
-  res.send(req.params.counter);
-});
-
-app.del('/count/:counter', function(req, res) {
-  res.send(req.params.counter);
-});
-
-app.listen(3000);
