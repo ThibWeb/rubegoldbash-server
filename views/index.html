@@ -188,8 +188,36 @@
         }
       }
 
+      h1 {
+        text-shadow: 0px 1px 0px #CCD6DD, 0px 6px 1px rgba(0, 0, 0, 0.1), 0px 0px 5px rgba(0, 0, 0, 0.1), 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 3px 5px rgba(0, 0, 0, 0.2);
+      }
+
       table {
-        font-size: 30px;
+        font-size: 22px;
+      }
+
+      tbody tr {
+        font-family: monospace;
+      }
+
+      tr:nth-child(1) .score {
+        color: red;
+        text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.1);
+        font-weight: bold;
+      }
+
+      tr:nth-child(2) .score {
+        color: orange;
+        text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.1);
+      }
+
+      tr:nth-child(3) .score {
+        color: gold;
+        text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.1);
+      }
+
+      td a {
+        text-decoration: underline;
       }
     </style>
 
@@ -209,10 +237,7 @@
         <div class="cover-container">
           <div class="inner cover">
             <h1 class="cover-heading">High Scores for <a href="http://www.rubegoldbash.com" style="color: cyan;">RubeGold<span style="color: green;">Bash</span></a></h1>
-            <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
-            <p class="lead">
-              <a href="#" class="btn btn-lg btn-default">Learn more</a>
-            </p>
+
             <table class="table table-condensed">
               <thead>
                 <tr>
@@ -226,18 +251,22 @@
                 {% for item in items %}
                   <tr>
                     <th scope="row">{{ loop.index }}</th>
-                    <td>{{ item.score }}</td>
+                    <td class="score">{{ item.score }}</td>
                     <td>{{ item.player }}</td>
-                    <td>{{ item.gist }}</td>
+                    <td><a href="{{ item.gist }}">{{ item.gist }}</a></td>
                   </tr>
                 {% endfor %}
               </tbody>
             </table>
+
+            <p class="lead">
+              <a href="http://www.rubegoldbash.com" class="btn btn-lg btn-default">Go beat them!</a>
+            </p>
           </div>
 
           <div class="mastfoot">
             <div class="inner">
-              <p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+              <p>Or go build a game at the <a href="http://globalgamejam.org/">Global Game Jam</a>.</p>
             </div>
           </div>
 
