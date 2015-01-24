@@ -3,6 +3,7 @@
 var mongoose = require('mongoose');
 var express = require('express');
 var bodyParser = require('body-parser');
+var swig = require('swig');
 var app = express();
 
 var env = process.env.NODE_ENV || 'development';
@@ -11,7 +12,13 @@ var mongodbURI = env === 'development' ? 'localhost': process.env.MONGOLAB_URI;
 
 mongoose.connect('mongodb://' + mongodbURI + '/highscores');
 app.set('port', (process.env.PORT || 5000));
+
 app.use(bodyParser.urlencoded({extended: false}));
+
+swig.setDefaults({ cache: false });
+app.engine('html', swig.renderFile);
+app.set('view engine', 'html');
+app.set('views', __dirname + '/views');
 
 var EntrySchema = new mongoose.Schema({
   game: { type: String, required: true },
@@ -41,8 +48,11 @@ function addToList(attributes, cb) {
 
 app.use(express.static(__dirname + '/public'));
 
-// curl http://localhost:5000/
 app.get('/', function(req, res) {
+  res.render('index', {});
+});
+
+app.get('/scores.json', function(req, res) {
   var options = {
     order: req.query.reverse ? -1 : 1,
     limit: req.query.limit || 10
@@ -58,7 +68,7 @@ app.get('/', function(req, res) {
 });
 
 // curl -X POST --data "player=test&score=3000&gist=gist" http://localhost:5000/
-app.post('/', function(req, res) {
+app.post('/scores.json', function(req, res) {
   addToList(req.body, function(err) {
     res.header('Access-Control-Allow-Origin', '*');
     res.type('application/json');
