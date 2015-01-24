@@ -1,17 +1,31 @@
 rubegoldbash-server
 ============
 
-TODO
+This is the highscore server for [RubeGoldBash](https://github.com/ThibWeb/rubegoldbash), a game which makes you write crazy bash commands.
 
-## LICENSE [![(CC0)](https://img.shields.io/badge/license-CC0-blue.svg?style=flat-square)](https://creativecommons.org/publicdomain/zero/1.0/)
+## Getting Started
 
-[CC0 1.0 Universal (CC0 1.0) Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/)
+~~~bash
+  npm run mongodb:start
+  npm run serve
+  npm run lint
+~~~
 
-The person who associated a work with this deed has dedicated the work to the public domain by waiving all of his or her rights to the work worldwide under copyright law, including all related and neighboring rights, to the extent allowed by law.
+## Built With
 
-You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission. See Other Information below.
+- Node
+- Express
+- MongoDB
+- Mongoose
+- Heroku
+- Bootstrap
 
-- In no way are the patent or trademark rights of any person affected by CC0, nor are the rights that other persons may have in the work or in how the work is used, such as publicity or privacy rights.
-- Unless expressly stated otherwise, the person who associated a work with this deed makes no warranties about the work, and disclaims liability for all uses of the work, to the fullest extent permitted by applicable law.
-- When using or citing the work, you should not imply endorsement by the author or the affirmer.
+## LICENSE ![(CC BY-NC-SA)](https://img.shields.io/badge/License-CC%20By--NC--SA%203.0-blue.svg?style=flat-square)](http://creativecommons.org/licenses/by-nc-sa/3.0/)
 
+This game and all content in this file is licensed under the Attribution-Noncommercial-Share Alike 3.0 version of the Creative Commons License. For reference the license is given below and can also be found at http://creativecommons.org/licenses/by-nc-sa/3.0/
+
+License
+
+THE WORK (AS DEFINED BELOW) IS PROVIDED UNDER THE TERMS OF THIS CREATIVE COMMONS PUBLIC LICENSE ("CCPL" OR "LICENSE"). THE WORK IS PROTECTED BY COPYRIGHT AND/OR OTHER APPLICABLE LAW. ANY USE OF THE WORK OTHER THAN AS AUTHORIZED UNDER THIS LICENSE OR COPYRIGHT LAW IS PROHIBITED.
+
+BY EXERCISING ANY RIGHTS TO THE WORK PROVIDED HERE, YOU ACCEPT AND AGREE TO BE BOUND BY THE TERMS OF THIS LICENSE. TO THE EXTENT THIS LICENSE MAY BE CONSIDERED TO BE A CONTRACT, THE LICENSOR GRANTS YOU THE RIGHTS CONTAINED HERE IN CONSIDERATION OF YOUR ACCEPTANCE OF SUCH TERMS AND CONDITIONS.
