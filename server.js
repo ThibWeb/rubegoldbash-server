@@ -6,6 +6,7 @@ var bodyParser = require('body-parser');
 var app = express();
 
 var env = process.env.NODE_ENV || 'development';
+// heroku config:set NODE_ENV=production
 var mongodbURI = env === 'development' ? 'localhost': process.env.MONGOLAB_URI;
 
 mongoose.connect('mongodb://' + mongodbURI + '/highscores');
