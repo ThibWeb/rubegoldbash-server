@@ -81,7 +81,7 @@ function scoreToCSV(items) {
     return a > b ? -1 : (a === b ? 0 : 1);
   });
 
-  return lines.join('\n');
+  return lines.join('\n') + '\n';
 }
 
 // curl -X POST --data "player=awesome&score=30000&gist=gisturl" http://localhost:5000/scores.txt
