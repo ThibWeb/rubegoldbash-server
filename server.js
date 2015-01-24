@@ -49,7 +49,13 @@ function addToList(attributes, cb) {
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', function(req, res) {
-  res.render('index', {});
+  var options = {
+    order: -1,
+    limit: 100
+  };
+  getList(options, function(err, items) {
+    res.render('index', { items: items });
+  });
 });
 
 app.get('/scores.json', function(req, res) {

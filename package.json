@@ -15,9 +15,12 @@
     "start": "node server.js",
     "serve": "nodemon server.js",
     "lint": "jshint .",
-    "mongodb:start": "mongod --dbpath ./.highscores/data/db"
+    "mongodb:start": "mongod --dbpath ./.highscores/data/db",
+    "webfont": "webfont-dl 'https://fonts.googleapis.com/css?family=Inconsolata' -o vt323.css --woff1=data --woff2=omit --svg=omit --ttf=omit --eot=omit"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "webfont-dl": "^0.1.2"
+  },
   "dependencies": {
     "body-parser": "^1.9.3",
     "express": "^4.10.3",
