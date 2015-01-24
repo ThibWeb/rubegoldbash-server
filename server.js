@@ -60,7 +60,7 @@ app.get('/', function(req, res) {
 
 app.get('/scores.json', function(req, res) {
   var options = {
-    order: req.query.reverse ? -1 : 1,
+    order: req.query.reverse ? 1 : -1,
     limit: req.query.limit || 10
   };
   getList(options, function(err, items) {
@@ -109,7 +109,7 @@ app.post('/scores.txt', function(req, res) {
       res.status(500).send(err.message || 'Undefined error');
     } else {
       var options = {
-        order: req.query.reverse ? -1 : 1,
+        order: req.query.reverse ? 1 : -1,
         limit: req.query.limit || 10
       };
       getList(options, function(err, items) {
@@ -128,7 +128,7 @@ app.get('/scores.txt', function(req, res) {
   res.header('Access-Control-Allow-Origin', '*');
   res.type('text/plain');
   var options = {
-    order: req.query.reverse ? -1 : 1,
+    order: req.query.reverse ? 1 : -1,
     limit: req.query.limit || 10
   };
   getList(options, function(err, items) {
