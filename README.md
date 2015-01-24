@@ -3,6 +3,10 @@
 
 This is the highscore server for [RubeGoldBash](https://github.com/ThibWeb/rubegoldbash), a game which makes you write crazy bash commands.
 
+~~~html
+  <iframe style="width: 100%; height: 600px" src="http://highscore.rubegoldbash.com/?limit=5"></iframe>
+~~~
+
 ## Getting Started
 
 ~~~bash

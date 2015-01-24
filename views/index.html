@@ -236,7 +236,7 @@
 
         <div class="cover-container">
           <div class="inner cover">
-            <h1 class="cover-heading">High Scores for <a href="http://www.rubegoldbash.com" style="color: cyan;">RubeGold<span style="color: green;">Bash</span></a></h1>
+            <h1 class="cover-heading">High Scores for <a target="blank" href="http://www.rubegoldbash.com" style="color: cyan;">RubeGold<span style="color: green;">Bash</span></a></h1>
 
             <table class="table table-condensed">
               <thead>
@@ -253,20 +253,20 @@
                     <th scope="row">{{ loop.index }}</th>
                     <td class="score">{{ item.score }}</td>
                     <td>{{ item.player }}</td>
-                    <td><a href="{{ item.gist }}">{{ item.gist }}</a></td>
+                    <td><a target="blank" href="{{ item.gist }}">{{ item.gist }}</a></td>
                   </tr>
                 {% endfor %}
               </tbody>
             </table>
 
             <p class="lead">
-              <a href="http://www.rubegoldbash.com" class="btn btn-lg btn-default">Go beat them!</a>
+              <a target="blank" href="http://www.rubegoldbash.com" class="btn btn-lg btn-default">Go beat them!</a>
             </p>
           </div>
 
           <div class="mastfoot">
             <div class="inner">
-              <p>Or go build a game at the <a href="http://globalgamejam.org/">Global Game Jam</a>.</p>
+              <p>Or go build a game at the <a target="blank" href="http://globalgamejam.org/">Global Game Jam</a>.</p>
             </div>
           </div>
 
