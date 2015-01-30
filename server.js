@@ -26,6 +26,7 @@ var EntrySchema = new mongoose.Schema({
   score: { type: Number, required: true },
   gist: {type: String, required: true },
   date: { type: Date, 'default': Date.now },
+  command: {type: String, required: false },
   comment: {type: String, required: false }
 });
 
@@ -73,7 +74,6 @@ app.get('/scores.json', function(req, res) {
   });
 });
 
-// curl -X POST --data "player=test&score=3000&gist=gist" http://localhost:5000/
 app.post('/scores.json', function(req, res) {
   addToList(req.body, function(err) {
     res.header('Access-Control-Allow-Origin', '*');
@@ -139,11 +139,6 @@ app.get('/scores.txt', function(req, res) {
     }
   });
 });
-
-app.get('/hello', function(request, response) {
-  response.send('Hello World!');
-});
-
 
 app.listen(app.get('port'), function() {
   console.log("Node app is running at localhost:" + app.get('port'));
