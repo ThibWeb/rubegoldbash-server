@@ -1,6 +1,6 @@
 {
   "name": "rubegoldbash-server",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "homepage": "https://github.com/ThibWeb/rubegoldbash-server",
   "description": "Highscore server for RubeGoldBash",
   "repository": {
@@ -15,7 +15,7 @@
     "start": "node server.js",
     "serve": "nodemon server.js",
     "lint": "jshint .",
-    "mongodb:start": "mongod --dbpath ./.highscores/data/db",
+    "start:mongodb": "mongod --dbpath ./.highscores/data/db",
     "webfont": "webfont-dl 'https://fonts.googleapis.com/css?family=Inconsolata' -o vt323.css --woff1=data --woff2=omit --svg=omit --ttf=omit --eot=omit"
   },
   "devDependencies": {
@@ -24,9 +24,7 @@
   "dependencies": {
     "body-parser": "^1.9.3",
     "express": "^4.10.3",
-    "method-override": "^2.3.0",
     "mongoose": "^3.8.21",
-    "morgan": "^1.5.0",
     "swig": "^1.4.2"
   }
 }
