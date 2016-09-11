@@ -1,7 +1,7 @@
 [RubeGoldBash High Scores](http://highscore.rubegoldbash.com/)
 ============
 
-This is the highscore server for [RubeGoldBash](https://github.com/ThibWeb/rubegoldbash), a game which makes you write crazy bash commands.
+This is the highscore server for [RubeGoldBash](https://github.com/thibaudcolas/rubegoldbash), a game which makes you write crazy bash commands.
 
 ![highscores-screenshot](raw/highscores-screenshot.png)
 

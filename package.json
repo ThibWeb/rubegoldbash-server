@@ -1,11 +1,11 @@
 {
   "name": "rubegoldbash-server",
   "version": "0.2.0",
-  "homepage": "https://github.com/ThibWeb/rubegoldbash-server",
+  "homepage": "https://github.com/thibaudcolas/rubegoldbash-server",
   "description": "Highscore server for RubeGoldBash",
   "repository": {
     "type": "git",
-    "url": "git://github.com/ThibWeb/rubegoldbash-server"
+    "url": "git://github.com/thibaudcolas/rubegoldbash-server"
   },
   "engines": {
     "node": ">=0.10.0"
